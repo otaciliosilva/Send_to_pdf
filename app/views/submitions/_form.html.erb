@@ -1,0 +1,27 @@
+<%= form_for(submition) do |f| %>
+  <% if submition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(submition.errors.count, "error") %> prohibited this submition from being saved:</h2>
+
+      <ul>
+      <% submition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Atividade %>
+    <%= f.text_field :Atividade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :Arquivo %>
+    <%= f.text_field :Arquivo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
