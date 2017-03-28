@@ -16,8 +16,8 @@
       <tr>
         <td><%= submition.Atividade %></td>
         <td><%= submition.Arquivo %></td>
-        <td><%= link_to 'Mostrar', submition %></td>
-        <td><%= link_to 'Editar', edit_submition_path(submition) %></td>
+        <td><%= link_to 'Download', submition %></td>
+        <td><%= link_to 'Alterar arquivo', edit_submition_path(submition) %></td>
         <td><%= link_to 'Deletar', submition, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>

@@ -11,8 +11,8 @@ class SubmitionsController < ApplicationController
   # GET /submitions/1.json
   def show
     extension=@submition.Arquivo.split('.')
-    send_file Rails.root.join('public', 'uploads', @submition.Arquivo),
-        :type=>"application/#{extension[1]}", :x_sendfile=>true
+    send_file Rails.root.join('public', 'uploads', @submition.Arquivo), #busca o arquivo na pasta referida
+        :type=>"application/#{extension[1]}", :x_sendfile=>true #tudo certo send recebe true
   end
 
   # GET /submitions/new
@@ -30,7 +30,7 @@ class SubmitionsController < ApplicationController
     @submition = Submition.new(submition_params)
 
     #save file no server paste
-    uploaded_io = params[:submition][:Arquivo]
+    uploaded_io = params[:submition][:Arquivo]#envia arquivo para a pasta uploads em public
     File.open(Rails.root.join('public','uploads', uploaded_io.original_filename), 'wb') do |file|
       file.write(uploaded_io.read)
     end

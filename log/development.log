@@ -602,3 +602,67 @@ Sent file /home/otacilioruas/Send_to_pdf/public/uploads/Ruby-on-Rails.jpg (0.1ms
 Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
 
 
+Started GET "/submitions/3" for 127.0.0.1 at 2017-03-28 11:06:17 -0300
+Processing by SubmitionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubmition Load (0.1ms)[0m  [1m[34mSELECT  "submitions".* FROM "submitions" WHERE "submitions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Sent file /home/otacilioruas/Send_to_pdf/public/uploads/Ruby-on-Rails.jpg (0.1ms)
+Completed 200 OK in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/submitions/3" for 127.0.0.1 at 2017-03-28 11:06:24 -0300
+Processing by SubmitionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubmition Load (0.1ms)[0m  [1m[34mSELECT  "submitions".* FROM "submitions" WHERE "submitions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Sent file /home/otacilioruas/Send_to_pdf/public/uploads/Ruby-on-Rails.jpg (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/submitions/3" for 127.0.0.1 at 2017-03-28 11:06:24 -0300
+Processing by SubmitionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubmition Load (0.1ms)[0m  [1m[34mSELECT  "submitions".* FROM "submitions" WHERE "submitions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Sent file /home/otacilioruas/Send_to_pdf/public/uploads/Ruby-on-Rails.jpg (0.1ms)
+Completed 200 OK in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/submitions/3" for 127.0.0.1 at 2017-03-28 11:06:26 -0300
+Processing by SubmitionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSubmition Load (0.2ms)[0m  [1m[34mSELECT  "submitions".* FROM "submitions" WHERE "submitions"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Sent file /home/otacilioruas/Send_to_pdf/public/uploads/Ruby-on-Rails.jpg (0.2ms)
+Completed 200 OK in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/submitions" for 127.0.0.1 at 2017-03-28 11:06:31 -0300
+Processing by SubmitionsController#index as HTML
+  Rendering submitions/index.html.erb within layouts/application
+  [1m[36mSubmition Load (0.1ms)[0m  [1m[34mSELECT "submitions".* FROM "submitions"[0m
+  Rendered submitions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/submitions" for 127.0.0.1 at 2017-03-28 11:06:34 -0300
+Processing by SubmitionsController#index as HTML
+  Rendering submitions/index.html.erb within layouts/application
+  [1m[36mSubmition Load (0.3ms)[0m  [1m[34mSELECT "submitions".* FROM "submitions"[0m
+  Rendered submitions/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/submitions" for 127.0.0.1 at 2017-03-28 11:07:02 -0300
+Processing by SubmitionsController#index as HTML
+  Rendering submitions/index.html.erb within layouts/application
+  [1m[36mSubmition Load (0.1ms)[0m  [1m[34mSELECT "submitions".* FROM "submitions"[0m
+  Rendered submitions/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/submitions/new" for 127.0.0.1 at 2017-03-28 11:07:12 -0300
+Processing by SubmitionsController#new as HTML
+  Rendering submitions/new.html.erb within layouts/application
+  Rendered submitions/_form.html.erb (1.5ms)
+  Rendered submitions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
