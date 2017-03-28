@@ -26,9 +26,16 @@ class SubmitionsController < ApplicationController
   def create
     @submition = Submition.new(submition_params)
 
+    #save file no server paste
+    uploaded_io = params[:submition][:Arquivo]
+    File.open(Rails.root.join('public','uploads', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+    @submition.Arquivo=uploaded_io.original_filename
+
     respond_to do |format|
       if @submition.save
-        format.html { redirect_to @submition, notice: 'Submition was successfully created.' }
+        format.html { redirect_to @submition, notice: 'Submição Enviada com Sucesso!.' }
         format.json { render :show, status: :created, location: @submition }
       else
         format.html { render :new }
@@ -42,7 +49,7 @@ class SubmitionsController < ApplicationController
   def update
     respond_to do |format|
       if @submition.update(submition_params)
-        format.html { redirect_to @submition, notice: 'Submition was successfully updated.' }
+        format.html { redirect_to @submition, notice: 'Submição Alterada com  Sucesso.' }
         format.json { render :show, status: :ok, location: @submition }
       else
         format.html { render :edit }
@@ -56,7 +63,7 @@ class SubmitionsController < ApplicationController
   def destroy
     @submition.destroy
     respond_to do |format|
-      format.html { redirect_to submitions_url, notice: 'Submition was successfully destroyed.' }
+      format.html { redirect_to submitions_url, notice: 'Submição Deletada com Sucesso!.' }
       format.json { head :no_content }
     end
   end

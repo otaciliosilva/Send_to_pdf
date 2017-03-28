@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Submitions</h1>
+<h1>Submições</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Atividade</th>
-      <th>Arquivo</th>
+      <th>Link será </th>
+      <th>Redirecinado</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= submition.Atividade %></td>
         <td><%= submition.Arquivo %></td>
-        <td><%= link_to 'Show', submition %></td>
-        <td><%= link_to 'Edit', edit_submition_path(submition) %></td>
-        <td><%= link_to 'Destroy', submition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', submition %></td>
+        <td><%= link_to 'Editar', edit_submition_path(submition) %></td>
+        <td><%= link_to 'Deletar', submition, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
