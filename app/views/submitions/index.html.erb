@@ -42,7 +42,7 @@
             <ol class="breadcrumb">
               <li><%= submition.Atividade %></li>
               <li><%= submition.Arquivo %></li>
-              <li><%= link_to ' Download ', submition %></li>
+              <li><%= link_to ' Mostrar ', submition %></li>
               <li><%= link_to ' Alterar arquivo ', edit_submition_path(submition) %></li>
               <li><%= link_to ' Deletar ', submition, method: :delete, data: { confirm: 'Você tem certeza?' } %></li>
             </ol>
@@ -71,11 +71,6 @@
                       e.preventDefault();
                       $("#wrapper").toggleClass("toggled");
                   });
-
-
               </script>
-
-
             </div>
-
           </div>
