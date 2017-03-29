@@ -39,13 +39,13 @@
       <table>
         <tbody>
         <% @submitions.each do |submition| %>
-            <ul class="nav nav-pills">
+            <ol class="breadcrumb">
               <li><%= submition.Atividade %></li>
               <li><%= submition.Arquivo %></li>
               <li><%= link_to ' Download ', submition %></li>
               <li><%= link_to ' Alterar arquivo ', edit_submition_path(submition) %></li>
               <li><%= link_to ' Deletar ', submition, method: :delete, data: { confirm: 'Você tem certeza?' } %></li>
-            </ul>
+            </ol>
         <% end %>
         </tbody>
       </table>

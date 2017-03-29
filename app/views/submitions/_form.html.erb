@@ -11,17 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :Atividade %>
-    <%= f.text_field :Atividade %>
-  </div>
+      <div class="field">
+        <ul class="nav nav-pills">
+          <%= f.label :Atividade %>
+          <%= f.text_field :Atividade %>
+        </ul>
+      </div>
 
-  <div class="field">
-    <%= f.label :Arquivo %>
-    <%= f.file_field :Arquivo %>
-  </div>
+      <div class="field">
+        <ul class="nav nav-pills">
+          <li><%= f.label :Arquivo %></li>
+          <li><%= f.file_field :Arquivo %></li>
+        </ul>
+      </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div class="actions">
+        <ul class="nav nav-pills">
+          <%= f.submit %>
+        </ul>
+     </div>
+    </ul>
 <% end %>
