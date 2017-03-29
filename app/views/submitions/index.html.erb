@@ -1,29 +1,81 @@
-<p id="notice"><%= notice %></p>
+<head><link href="/Send_to_pdf/app/assets/stylesheets/front.css" rel="stylesheet"></head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-<h1>Submições</h1>
+<div class="container">
+  <div class="row">
+    <h2>Submição</h2>
+    <hr/>
 
-<table>
-  <thead>
-    <tr>
-      <th>Link será </th>
-      <th>Redirecinado</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div id="wrapper">
 
-  <tbody>
-    <% @submitions.each do |submition| %>
-      <tr>
-        <td><%= submition.Atividade %></td>
-        <td><%= submition.Arquivo %></td>
-        <td><%= link_to 'Download', submition %></td>
-        <td><%= link_to 'Alterar arquivo', edit_submition_path(submition) %></td>
-        <td><%= link_to 'Deletar', submition, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" style="margin-left:0;">
+          <li class="sidebar-brand">
+            <a href="#menu-toggle"  id="menu-toggle" style="margin-top:20px;float:right;" > <i class="glyphicon glyphicon-th-list " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i>
+           </li>
+          <li>
+            <a href="/submitions"><i class="glyphicon glyphicon-home " aria-hidden="true"> </i> <span style="margin-left:10px;">Home</span>  </a>
+          </li>
+          <li>
+            <a href="#"> <i class="glyphicon glyphicon-folder-open " aria-hidden="true"> </i> <span style="margin-left:10px;">Download</span> </a>
+          </li>
+          <li>
+            <a href="/submitions/new"> <i class="glyphicon glyphicon-open " aria-hidden="true"> </i> <span style="margin-left:10px;"> Enviar</span> </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
 
-<br>
+      <p id="notice"><%= notice %></p>
 
-<%= link_to 'Selecionar Arquivo', new_submition_path %>
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Arquivos Enviados</div>
+        <div class="panel-body">
+
+        </div>
+      <table>
+        <tbody>
+        <% @submitions.each do |submition| %>
+            <ul class="nav nav-pills">
+              <li><%= submition.Atividade %></li>
+              <li><%= submition.Arquivo %></li>
+              <li><%= link_to ' Download ', submition %></li>
+              <li><%= link_to ' Alterar arquivo ', edit_submition_path(submition) %></li>
+              <li><%= link_to ' Deletar ', submition, method: :delete, data: { confirm: 'Você tem certeza?' } %></li>
+            </ul>
+        <% end %>
+        </tbody>
+      </table>
+      </div>
+      <br>
+
+      <!-- /# link_to 'Selecionar Arquivo', new_submition_path %> -->
+
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+
+              </a>
+
+              <!-- /#page-content-wrapper -->
+
+              <!-- /#wrapper -->
+
+              <script>
+                  $("#menu-toggle").click(function(e) {
+                      e.preventDefault();
+                      $("#wrapper").toggleClass("toggled");
+                  });
+
+
+              </script>
+
+
+            </div>
+
+          </div>

@@ -10,9 +10,9 @@ class SubmitionsController < ApplicationController
   # GET /submitions/1
   # GET /submitions/1.json
   def show
-    extension=@submition.Arquivo.split('.')
-    send_file Rails.root.join('public', 'uploads', @submition.Arquivo), #busca o arquivo na pasta referida
-        :type=>"application/#{extension[1]}", :x_sendfile=>true #tudo certo send recebe true
+    # extension=@submition.Arquivo.split('.')
+    # send_file Rails.root.join('public', 'uploads', @submition.Arquivo), #busca o arquivo na pasta referida
+    #     :type=>"application/#{extension[1]}", :x_sendfile=>true #tudo certo send recebe true
   end
 
   # GET /submitions/new

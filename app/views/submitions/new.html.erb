@@ -1,5 +1,58 @@
-<h1>Enviar Arquivo</h1>
+
+<head><link href="/Send_to_pdf/app/assets/stylesheets/front.css" rel="stylesheet"></head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<div class="container">
+  <div class="row">
+    <h2>Enviar Arquivo</h2>
+    <hr/>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" style="margin-left:0;">
+          <li class="sidebar-brand">
+            <a href="#menu-toggle"  id="menu-toggle" style="margin-top:20px;float:right;" > <i class="glyphicon glyphicon-th-list " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i>
+          </li>
+          <li>
+            <a href="/submitions"><i class="glyphicon glyphicon-home " aria-hidden="true"> </i> <span style="margin-left:10px;">Home</span>  </a>
+          </li>
+          <li>
+            <a href="#"> <i class="glyphicon glyphicon-folder-open " aria-hidden="true"> </i> <span style="margin-left:10px;">Download</span> </a>
+          </li>
+          <li>
+            <a href="/submitions/new"> <i class="glyphicon glyphicon-open " aria-hidden="true"> </i> <span style="margin-left:10px;"> Enviar</span> </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
 
 <%= render 'form', submition: @submition %>
 
-<%= link_to 'Voltar', submitions_path %>
+      <!-- Page Content -->
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-12">
+
+              </a>
+
+              <!-- /#page-content-wrapper -->
+
+              <!-- /#wrapper -->
+
+              <script>
+                  $("#menu-toggle").click(function(e) {
+                      e.preventDefault();
+                      $("#wrapper").toggleClass("toggled");
+                  });
+
+
+              </script>
+
+
+            </div>
+
+          </div>

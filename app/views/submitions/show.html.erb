@@ -1,14 +1,79 @@
+<head><link href="/Send_to_pdf/app/assets/stylesheets/front.css" rel="stylesheet"></head>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<div class="container">
+  <div class="row">
+    <h2>Submição</h2>
+    <hr/>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper">
+        <ul class="sidebar-nav" style="margin-left:0;">
+          <li class="sidebar-brand">
+            <a href="#menu-toggle"  id="menu-toggle" style="margin-top:20px;float:right;" > <i class="glyphicon glyphicon-th-list " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i>
+          </li>
+          <li>
+            <a href="/submitions"><i class="glyphicon glyphicon-home " aria-hidden="true"> </i> <span style="margin-left:10px;">Home</span>  </a>
+          </li>
+          <li>
+            <a href="#"> <i class="glyphicon glyphicon-folder-open " aria-hidden="true"> </i> <span style="margin-left:10px;">Download</span> </a>
+          </li>
+          <li>
+            <a href="/submitions/new"> <i class="glyphicon glyphicon-open " aria-hidden="true"> </i> <span style="margin-left:10px;"> Enviar</span> </a>
+          </li>
+        </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <p id="notice"><%= notice %></p>
+
 <p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Arquivo Enviado</div>
+  <div class="panel-body">
+    <p>
+      <strong>Atividade:</strong>
+      <%= @submition.Atividade %>
+    </p>
 
-<p>
-  <strong>Atividade:</strong>
-  <%= @submition.Atividade %>
-</p>
+    <p>
+      <strong>Arquivo:</strong>
+      <%= @submition.Arquivo %>
+    </p>
+  </div>
+  <ul class="nav nav-pills">
+    <li><%= link_to 'Editar', edit_submition_path(@submition) %> </li>
+    <li><%= link_to 'Voltar', submitions_path %></li>
+  </ul>
 
-<p>
-  <strong>Arquivo:</strong>
-  <%= @submition.Arquivo %>
-</p>
+  <!-- /# link_to 'Selecionar Arquivo', new_submition_path %> -->
 
-<%= link_to 'Editar', edit_submition_path(@submition) %> |
-<%= link_to 'Voltar', submitions_path %>
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+
+          </a>
+
+          <!-- /#page-content-wrapper -->
+
+          <!-- /#wrapper -->
+
+          <script>
+              $("#menu-toggle").click(function(e) {
+                  e.preventDefault();
+                  $("#wrapper").toggleClass("toggled");
+              });
+
+
+          </script>
+
+
+        </div>
+
+      </div>
