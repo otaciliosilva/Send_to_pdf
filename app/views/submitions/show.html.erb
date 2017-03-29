@@ -31,8 +31,6 @@
       </div>
       <!-- /#sidebar-wrapper -->
 
-      <p id="notice"><%= notice %></p>
-
 <p id="notice"><%= notice %></p>
 <div class="panel panel-default">
   <!-- Default panel contents -->
@@ -51,6 +49,7 @@
   <ul class="nav nav-pills">
     <li><%= link_to 'Editar', edit_submition_path(@submition) %> </li>
     <li><%= link_to 'Voltar', submitions_path %></li>
+
   </ul>
 
   <!-- /# link_to 'Selecionar Arquivo', new_submition_path %> -->
@@ -72,8 +71,6 @@
                   e.preventDefault();
                   $("#wrapper").toggleClass("toggled");
               });
-
-
           </script>
 
 

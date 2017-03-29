@@ -50,6 +50,7 @@ class SubmitionsController < ApplicationController
   # PATCH/PUT /submitions/1
   # PATCH/PUT /submitions/1.json
   def update
+
     respond_to do |format|
       if @submition.update(submition_params)
         format.html { redirect_to @submition, notice: 'Submição Alterada com  Sucesso.' }
