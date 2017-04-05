@@ -3,6 +3,9 @@ class SubmitionsController < ApplicationController
 
   # GET /submitions
   # GET /submitions.json
+  def download
+    @submitions = Submition.all
+  end
   def index
     @submitions = Submition.all
   end
