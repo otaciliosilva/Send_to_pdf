@@ -1,6 +1,8 @@
-<nav class="navbar navbar-inverse">
-  <ul><li><%= link_to "Sair", destroy_user_session_path, method: :delete%></li></ul>
-  ...
+<nav class="navbar navbar">
+  <ul>
+    <li><%= current_user.email %></li>
+    <li><%= link_to "Sair", destroy_user_session_path, method: :delete%></li>
+  </ul>
 </nav>
 <head><link href="/Send_to_pdf/app/assets/stylesheets/front.css" rel="stylesheet"></head>
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
